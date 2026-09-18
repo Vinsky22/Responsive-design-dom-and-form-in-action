@@ -1,0 +1,26 @@
+
+#Student-info {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+#Student-info li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+#Student-form {
+  background-color: blue;
+  max-width: 200px;
+  color: white;
+}
