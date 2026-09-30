@@ -1,26 +1,131 @@
+/* Universal style */
+*{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-#Student-info {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 16px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* header */
+
+header{
+    padding: 10px 50px;
+    margin: 20px;
+    box-shadow: 2px 2px black;
+    border-radius: 20px;
+    background-color: gray;
+    color: white;
+    max-width: 300px;
+}
+
+header > h1{
+    font-size: 30px;
+    font-family: monospace;
+}
+
+header > small{
+    font-style: italic;
+}
+
+body{
+    background-color: whitesmoke;
+}
+
+/* Form Styles */
+
+#formContainer{
+    padding: 10px 50px;
+    margin: 20px;
+    box-shadow: 2px 2px black;
+    border-radius: 20px;
+    background-color: gray;
+    color: white;
+    width: 300px;
+}
+
+#formContainer > #studentForm > .input-fields > label{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#formContainer > #studentForm > .input-fields > input{
+    border: 20px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#formContainer > #studentForm > .input-fields{
+    display: flex;
+    flex-direction: column;
+}
+
+#formContainer > #studentForm :last-child > button{
+    display: flex;
+    justify-self: center;
+    margin-top: 20px;
+    background-color: rgb(2, 173, 2);
+    padding: 10px 50px;
+    border-radius: 25px;
+    border-color: white;
+    cursor:grabbing;
+    color: white;
+}
+
+#formContainer > #studentForm :last-child > button:hover{
+    background-color: rgb(28, 197, 28);
+}
+
+/* list container */
+#studentList {
+    display: grid;
+    width: 90%;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 60px
+}
+
+/* responsive design */
+@media (width <= 440px){
+    #studentList > .list-item {
+        grid-column: span 12;
+    }
+}
+
+@media (width >= 440px){
+    #studentList > .list-item {
+        grid-column: span 6;
+    }
+}
+
+@media (width >= 1280px){
+    #studentList > .list-item {
+        grid-column: span 4;
+    }
 }
 
 
-#Student-info li {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  padding: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background: #fafafa;
+
+.list-item{
+    padding: 10px 10px;
+    box-shadow: 2px 2px black;
+    border-radius: 20px;
+    background-color: gray;
+    width: 100%;
+    margin: 20px;
 }
 
-#Student-form {
-  background-color: blue;
-  max-width: 200px;
-  color: white;
+.button {
+    display: flex;
+    justify-self: center;
+    margin-top: 20px;
+    background-color: red;
+    padding: 10px 50px;
+    border-radius: 25px;
+    border-color: white;
+    cursor:crosshair;
+    color: white;
+
+}
+
+.button:hover {
+    background-color: rgb(245, 53, 53);
 }
